@@ -1,0 +1,69 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>uma.caosd</groupId>
+  <artifactId>fms-parent</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+    <tycho-version>4.0.12</tycho-version>
+    <tycho.disableP2Mirrors>true</tycho.disableP2Mirrors>
+  </properties>
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub kas-lab splc2020 Packages</name>
+      <url>https://maven.pkg.github.com/kas-lab/splc2020</url>
+    </repository>
+  </distributionManagement>
+
+  <modules>
+    <module>../fms.metamodel</module>
+  </modules>
+
+  <repositories>
+    <repository>
+      <id>eclipse</id>
+      <layout>p2</layout>
+      <url>https://download.eclipse.org/releases/2025-12/</url>
+    </repository>
+  </repositories>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>target-platform-configuration</artifactId>
+        <version>${tycho-version}</version>
+        <configuration>
+          <executionEnvironment>JavaSE-21</executionEnvironment>
+          <environments>
+            <environment><os>linux</os><ws>gtk</ws><arch>x86_64</arch></environment>
+            <environment><os>macosx</os><ws>cocoa</ws><arch>x86_64</arch></environment>
+            <environment><os>win32</os><ws>win32</ws><arch>x86_64</arch></environment>
+          </environments>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>3.1.4</version>
+        <configuration>
+          <deployAtEnd>true</deployAtEnd>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
