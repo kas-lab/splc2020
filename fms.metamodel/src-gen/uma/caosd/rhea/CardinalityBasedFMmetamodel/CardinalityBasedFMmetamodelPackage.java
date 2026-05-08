@@ -113,6 +113,15 @@ public interface CardinalityBasedFMmetamodelPackage extends EPackage {
 	int GROUP_FEATURE__PARENT = BasicFMmetamodelPackage.FEATURE__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUP_FEATURE__SELECTED = BasicFMmetamodelPackage.FEATURE__SELECTED;
+
+	/**
 	 * The feature id for the '<em><b>Lower</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

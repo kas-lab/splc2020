@@ -2,24 +2,24 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: fms.metamodel;singleton:=true
-Automatic-Module-Name: fms.metamodel
 Bundle-Version: 1.0.0
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport
 Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: uma.caosd.rhea.BasicFMmetamodel,
  uma.caosd.rhea.BasicFMmetamodel.impl,
  uma.caosd.rhea.BasicFMmetamodel.util,
- uma.caosd.rhea.BasicConstraintsFMmetamodel,
- uma.caosd.rhea.BasicConstraintsFMmetamodel.impl,
- uma.caosd.rhea.BasicConstraintsFMmetamodel.util,
  uma.caosd.rhea.AdvancedConstraintsFMmetamodel,
  uma.caosd.rhea.AdvancedConstraintsFMmetamodel.impl,
  uma.caosd.rhea.AdvancedConstraintsFMmetamodel.util,
+ uma.caosd.rhea.BasicConstraintsFMmetamodel,
+ uma.caosd.rhea.BasicConstraintsFMmetamodel.impl,
+ uma.caosd.rhea.BasicConstraintsFMmetamodel.util,
  uma.caosd.rhea.CardinalityBasedFMmetamodel,
  uma.caosd.rhea.CardinalityBasedFMmetamodel.impl,
  uma.caosd.rhea.CardinalityBasedFMmetamodel.util
-Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: fms.metamodel
